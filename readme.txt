@@ -4,4 +4,4 @@ git change
 git change again
 uf
 
-version 1.0.1
+version 1.0.2
