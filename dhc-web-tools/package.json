@@ -1,0 +1,93 @@
+{
+  "_from": "dhc-web-tools@^1.1.13",
+  "_id": "dhc-web-tools@1.1.13",
+  "_inBundle": false,
+  "_integrity": "sha512-wPep3nujYEPjwk2zsl5Th9cdyh//PA5MJ8ijuFq4oVfuXY96Ng+OUzcfzvAi8ytt0tONbpgFoLWatsCRnnyUAQ==",
+  "_location": "/dhc-web-tools",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "dhc-web-tools@^1.1.13",
+    "name": "dhc-web-tools",
+    "escapedName": "dhc-web-tools",
+    "rawSpec": "^1.1.13",
+    "saveSpec": null,
+    "fetchSpec": "^1.1.13"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://114.116.34.21:3389/dhc-web-tools/-/dhc-web-tools-1.1.13.tgz",
+  "_shasum": "e7140fee3c8f28b38c597f025f0cb6f750e2ff19",
+  "_spec": "dhc-web-tools@^1.1.13",
+  "_where": "D:\\account\\newBase\\account-ui",
+  "author": {
+    "name": "tianming"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "npm publish",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "chokidar": "^2.0.3",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "expose-loader": "^0.7.3",
+    "express": "^4.16.2",
+    "express-http-proxy": "^1.0.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "glob": "^7.1.2",
+    "happypack": "^4.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "http-proxy-middleware": "^0.17.4",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.19.0",
+    "toastr": "^2.1.4",
+    "uglify-js": "^3.1.6",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "dhc-web-tools"
+  ],
+  "license": "ISC",
+  "main": "./lib/index.js",
+  "name": "dhc-web-tools",
+  "publishConfig": {
+    "registry": "http://114.116.34.21:3389/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://codehub.devcloud.huaweicloud.com/jckjyf00001/dhc-web-tools.git"
+  },
+  "scripts": {
+    "build": "webpack --config build/webpack.prod.config.js  --progress",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node ./sync-sourcefile.js"
+  },
+  "version": "1.1.13"
+}

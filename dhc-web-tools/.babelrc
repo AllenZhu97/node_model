@@ -1,0 +1,44 @@
+{
+    "presets": [
+      ["es2015", {
+        "modules": false
+      }]
+    ],
+    "ignore":[
+      "jquery.parser.js",
+      "jquery.label.js",
+      "jquery.validatebox.js",
+      "jquery.panel.js",
+      "jquery.draggable.js",
+      "jquery.resizable.js",
+      "jquery.window.js",
+      "jquery.dialog.js",
+      "jquery.calendar.js",
+      "jquery.tooltip.js",
+      "jquery.textbox.js",
+      "jquery.combo.js",
+      "jquery.combobox.js",
+      "jquery.tree.js",
+      "jquery.combotree.js",
+      "jquery.inputTree.js",
+      "jquery.datagrid.js",
+      "jquery.treegrid.js",
+      "jquery.combogrid.js",
+      "jquery.lookup.js",
+      "jquery.combotreegrid.js",
+      "jquery.datebox.js",
+      "jquery.droppable.js",
+      "jquery.form.js",
+      "jquery.linkbutton.js",
+      "jquery.tabs.js",
+      "jquery.numberbox.js",
+      "jquery.pagination.js",
+      "jquery.layout.js",
+      "jquery.filebox.js",
+      "jquery.messager.js",
+      "jquery.buttons",
+      "jquery.element",
+      "jquery.inputTree",
+      "jquery.label"
+  ]
+  }
