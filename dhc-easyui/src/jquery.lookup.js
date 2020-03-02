@@ -67,6 +67,7 @@ $.fn.lookup = function (options, param) {//定义扩展组件
             toolbar:"#"+id+"_toolbar",
             delayLoad:true,
 						height: 22,
+						width: 170,
             editable:false,
             onShowPanel:function(){
             	searchBox(jq,opts);

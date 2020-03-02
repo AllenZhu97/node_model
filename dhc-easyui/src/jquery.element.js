@@ -270,8 +270,6 @@ var tree_manager = {};
                     opts = $.extend({
                         editable:false,panelWidth:600,panelHeight:300
                     },opts);
-                    // 放大镜需要设置显示框长度 add by heyh 2020-02-07
-                    jq.css('width',opts.width);
                     $.fn.lookup.call(jq,opts);
                     break;
                 }

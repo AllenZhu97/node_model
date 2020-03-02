@@ -149,20 +149,19 @@ export default {
     openWindow(instance,opts) {
         router.getRouter(opts.url)( (ViewModel) => {
             var instanceName = ViewModel.default.name;
+            var container = $('<div id="' + instanceName + '" class="open-win" style="width:100%;height:100%"/>');
             // 账户系统管理端特殊处理  add by zhuxingpeng 2020-02-06
             if (instance.sysType == 'AMS' && opts.notPage == 'Y') {
-                var container = $('<div id="' + instanceName + '" style="width:100%;height:100%"/>');
-            } else {
-                var container = $('<div id="' + instanceName + '" class="open-win" style="width:100%;height:100%"/>');
+                container = $('<div id="' + instanceName + '" style="width:100%;height:100%"/>');
             }
             // 参数传递
             var data = $.extend({
                 page_type: opts.page_type,
                 rowindex: opts.rowindex,
             }, opts.rowdata);
-
-            // 数据表格操作列中有新增按钮时，希望把新增这一行的数据传到新增页面中
+            
             if (opts.page_type == '1') {
+                // 数据表格操作列中有新增按钮时，希望把新增这一行的数据传到新增页面中
                 if(opts.rowindex !== undefined && opts.rowindex !== null && opts.rowindex !== '') {
                     var grid = instance.el[opts.gridid];
                     var row = null;
@@ -182,9 +181,9 @@ export default {
                     }
                 }
             } else {
-                //  打开窗口时页面类型为非新增页时,并从常量类中获取
-                 //增加选中当前行
-                 if (opts.rowindex != undefined) {
+                // 打开窗口时页面类型为修改页,并从常量类中获取
+                //增加选中当前行
+                if (opts.rowindex != undefined) {
                 	instance.el[opts.gridid].datagrid('selectRow', opts.rowindex);
                 } 
                 let row = instance.el[opts.gridid].datagrid('getSelected');
@@ -195,10 +194,9 @@ export default {
                     data = $.extend(row, data);
                 }
             }
-
             var modInstance = null;
             //新打开的页面组件
-            if(instance.sysType = 'AMS'){
+            if(instance.sysType === 'AMS'){
                 // 如果要账户系统管理端 传递两个参数， add by heyh 2019-12-24
                 modInstance = new ViewModel.default(container, data);
             }else{
@@ -219,10 +217,10 @@ export default {
             var patt = new RegExp(/^\d+%$/);
             
             //设置不同的窗口id，防止因窗口名重复导致窗口覆盖
-            var wiodowId = 'WindowModel'+instanceName;
             if(modInstance.param == undefined){// 处理modInstance.param==undefined 报错问题， add by chengmeng 2020-01-21
                 modInstance.param = {};
             }
+            var wiodowId = 'WindowModel'+instanceName;
             modInstance.param.windowID = wiodowId;
             $('body').append('<div id="'+wiodowId+'"></div>');
             // 默认和当前页面宽度高度相同

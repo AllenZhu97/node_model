@@ -12,12 +12,12 @@ export default {
         }
         var paramArray = this.getSearchParam(instance);
         var gridType = void 0;
-        if(typeof gridArray =='undefined'){
-            gridType = options.gridType;
+        var gridArray = window.gridArray || {};  // 兼容账户系统没有定义gridArray的问题
+        if(gridArray){
+            gridType = gridArray[gridid];
         } else {
-            gridType = gridArray[gridid];  
+            gridType = options.gridType;
         }
-
         if (gridType == '1' || gridType == undefined) {
             options = instance.el[gridid].datagrid('options');
             var temp = $.extend(options.queryParams, paramArray);

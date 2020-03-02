@@ -32,7 +32,7 @@ export default {
     },
     submitForm: function(instance, obj) {
         var formid = obj.formID;
-		// 账户管理系统(AMS)拓展处理 add by zhuxingpeng 2020-01-04
+        // 账户管理系统(AMS)拓展处理 add by zhuxingpeng 2020-01-04
         if(instance && instance.sysType=='AMS'){
             $('#' + formid, obj.instance.container).form('submit', {
                 iframe: false,
@@ -55,7 +55,8 @@ export default {
             if (obj.ajaxSuccess != undefined && obj.ajaxSuccess != '') {
                 if (obj.ajaxSuccess.call(instance, obj) == false) return false;
             }
-        }  
+        }
+        
     },
     /**
 	 * 点击暂存按钮调用此方法

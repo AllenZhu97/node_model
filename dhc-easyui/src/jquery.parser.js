@@ -84,7 +84,6 @@
 							var dataOptions = $.data(this, 'options')||{};
 							// 账户系统管理端特殊处理 add by heyh 2020-01-11
 							if(opts.data && opts.data.instance && 'AMS' == opts.data.instance.sysType){
-								console.log(opts);
 								dataOptions.instance = opts.data.instance;
 								//将组件的jquery对象绑定到instance的el属性上
 								if(dataOptions.instance.el==undefined){
@@ -377,7 +376,7 @@
 					val = 24
 				}
 				if (p == "width"){
-					val = 168
+					val = 170
 				}
 			}
 			if (!isNaN(val)){

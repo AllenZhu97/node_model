@@ -1,26 +1,26 @@
 {
-  "_from": "dhc-web-tools@^1.1.13",
-  "_id": "dhc-web-tools@1.1.13",
+  "_from": "dhc-web-tools@^1.1.15",
+  "_id": "dhc-web-tools@1.1.15",
   "_inBundle": false,
-  "_integrity": "sha512-wPep3nujYEPjwk2zsl5Th9cdyh//PA5MJ8ijuFq4oVfuXY96Ng+OUzcfzvAi8ytt0tONbpgFoLWatsCRnnyUAQ==",
+  "_integrity": "sha512-FIWakS7aLYEvyLo3z0Q7x8vTBLshPpREvlHtkWtg5Zt0g/dwdESNYnUAmMlm1GbVyoEG1Rx7OS5QAEl3ZQbgeA==",
   "_location": "/dhc-web-tools",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "dhc-web-tools@^1.1.13",
+    "raw": "dhc-web-tools@^1.1.15",
     "name": "dhc-web-tools",
     "escapedName": "dhc-web-tools",
-    "rawSpec": "^1.1.13",
+    "rawSpec": "^1.1.15",
     "saveSpec": null,
-    "fetchSpec": "^1.1.13"
+    "fetchSpec": "^1.1.15"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "http://114.116.34.21:3389/dhc-web-tools/-/dhc-web-tools-1.1.13.tgz",
-  "_shasum": "e7140fee3c8f28b38c597f025f0cb6f750e2ff19",
-  "_spec": "dhc-web-tools@^1.1.13",
+  "_resolved": "http://114.116.34.21:3389/dhc-web-tools/-/dhc-web-tools-1.1.15.tgz",
+  "_shasum": "4e0dfa64f281dcf1a8eadd325d2af881d12eaf96",
+  "_spec": "dhc-web-tools@^1.1.15",
   "_where": "D:\\account\\newBase\\account-ui",
   "author": {
     "name": "tianming"
@@ -89,5 +89,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node ./sync-sourcefile.js"
   },
-  "version": "1.1.13"
+  "version": "1.1.15"
 }

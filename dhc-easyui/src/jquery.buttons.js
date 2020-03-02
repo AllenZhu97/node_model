@@ -111,7 +111,7 @@ window.btnType={};
                 // 针对查询按钮进行校验
                 let isValidate = true;
                 if(opts.text.indexOf('查询') > -1) {
-                    const inputs = $('.easyui-group div:not(:hidden) .textbox-value');
+                    const inputs = $('.panel.layout-panel.layout-panel-north.layout-split-north div:not(:hidden) .textbox-value', '#' + opts.instance.namespace);
                     inputs.each((index,element) => {
                         const vali = $('#' + element.name, '#' + opts.instance.namespace).textbox('isValid');
                         if(!vali) {

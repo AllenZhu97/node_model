@@ -207,20 +207,19 @@
 
 		view.height(view2.height());
 		//修改分页工具栏超出
-		if (wrap.parents('.open-win').first().length > 0) {
-			var wrapTop = wrap.offset().top,
-				p2Top = wrap.parents('.open-win').first().offset().top,
-				wrapBottom = wrapTop + wrap.height(),
-				p2Bottom = p2Top + wrap.parents('.open-win').first().height();
-			if (p2Bottom < wrapBottom) {
-				wrap.height(wrap.height() - (wrapBottom - p2Bottom + 5));
-			}
-		}
-		if (wrap.height() - view.height() < 25 && opts.pagination) {
-			var viewHeight = view.height();
-			view.height(viewHeight - 32);
-		}
-		
+        if (wrap.parents('.open-win').first().length > 0) {
+            var wrapTop = wrap.offset().top,
+                p2Top = wrap.parents('.open-win').first().offset().top,
+                wrapBottom = wrapTop + wrap.height(),
+                p2Bottom = p2Top + wrap.parents('.open-win').first().height();
+            if (p2Bottom < wrapBottom) {
+                wrap.height(wrap.height() - (wrapBottom - p2Bottom + 5));
+            }
+        }
+        if (wrap.height() - view.height() < 25 && opts.pagination) {
+            var viewHeight = view.height();
+            view.height(viewHeight - 32);
+        }
         // if (opts.pagination) {
         //     view.height(view2.height() - 10);
         // }
@@ -3004,22 +3003,22 @@
 		},
 		// 账户管理系统(AMS)拓展处理 add by zhuxingpeng 2020-01-15
 		setEmptyMsg: function (target) {
-            var state = $.data(target, 'datagrid');
-            var opts = state.options;
-            var isEmpty = opts.finder.getRows(target).length == 0;
-            if (isEmpty) {
-                this.renderEmptyRow(target);
-            }
-            if (opts.emptyMsg) {
-                if (isEmpty) {
-                    var h = state.dc.header2.parent().outerHeight();
-                    var d = $('<div class="datagrid-empty"></div>').appendTo(state.dc.view);
-                    d.html(opts.emptyMsg).css('top', h + 'px');
-                } else {
-                    state.dc.view.children('.datagrid-empty').remove();
-                }
-            }
-        },
+			var state = $.data(target, 'datagrid');
+			var opts = state.options;
+			var isEmpty = opts.finder.getRows(target).length == 0;
+			if (isEmpty) {
+				this.renderEmptyRow(target);
+			}
+			if (opts.emptyMsg) {
+				if (isEmpty) {
+					var h = state.dc.header2.parent().outerHeight();
+					var d = $('<div class="datagrid-empty"></div>').appendTo(state.dc.view);
+					d.html(opts.emptyMsg).css('top', h + 'px');
+				} else {
+					state.dc.view.children('.datagrid-empty').remove();
+				}
+			}
+		},
 		renderEmptyRow: function(target){
 			var cols = $.map($(target).datagrid('getColumnFields'), function(field){
 				return $(target).datagrid('getColumnOption', field);

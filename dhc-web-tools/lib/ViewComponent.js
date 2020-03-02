@@ -561,7 +561,7 @@ class ViewComponent {
         if (flag) {
           data += ',';
         }
-        data += '"' + elment.name + '":"' + elment.value + '"';
+        data += '\'' + elment.name + '\':\'' + elment.value + '\'';
         flag = true;
       }
     }

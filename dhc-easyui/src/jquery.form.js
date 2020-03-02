@@ -281,7 +281,7 @@ import message from './message';
 			}
 		}
 
-		if (typeof formObj=='object' && url != undefined){
+		if (typeof formObj=='object' && url != undefined && url != ''){
 			if(formObj.page_type=='2'){
 				url =  url + "/display";
 			}else{

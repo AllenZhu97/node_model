@@ -1,26 +1,26 @@
 {
-  "_from": "dhc-easyui@^1.2.8",
-  "_id": "dhc-easyui@1.2.8",
+  "_from": "dhc-easyui@^1.3.0",
+  "_id": "dhc-easyui@1.3.0",
   "_inBundle": false,
-  "_integrity": "sha512-ZKaDdpmqjqd18SeLuItXavdUHVMaq5Fqs3Emfoan18vZvUFGFaEbXSXxRDyf+SjGYfrBYZsWozwFzYV0legsTw==",
+  "_integrity": "sha512-8tWZ5KBb6zwgd3p039jsTRVAOuKzToxcZe5kCxWrjvmyLc4g+Loc6FhdjWqk0AbZTRJGnq+o7pZSREiuJrVk3A==",
   "_location": "/dhc-easyui",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "dhc-easyui@^1.2.8",
+    "raw": "dhc-easyui@^1.3.0",
     "name": "dhc-easyui",
     "escapedName": "dhc-easyui",
-    "rawSpec": "^1.2.8",
+    "rawSpec": "^1.3.0",
     "saveSpec": null,
-    "fetchSpec": "^1.2.8"
+    "fetchSpec": "^1.3.0"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "http://114.116.34.21:3389/dhc-easyui/-/dhc-easyui-1.2.8.tgz",
-  "_shasum": "b915f97c3c8ce470367a6bf4695aa378cf3c8034",
-  "_spec": "dhc-easyui@^1.2.8",
+  "_resolved": "http://114.116.34.21:3389/dhc-easyui/-/dhc-easyui-1.3.0.tgz",
+  "_shasum": "5e2d9978e62d52f24d9ce6d8499745258939d106",
+  "_spec": "dhc-easyui@^1.3.0",
   "_where": "D:\\account\\newBase\\account-ui",
   "author": "",
   "bundleDependencies": false,
@@ -80,5 +80,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node ./sync-sourcefile.js"
   },
-  "version": "1.2.8"
+  "version": "1.3.0"
 }
