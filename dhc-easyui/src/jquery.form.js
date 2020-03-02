@@ -526,6 +526,7 @@ import message from './message';
 				if (display != 'none'){
 					invalidInput.push(this);
 					message.error(`输入项【 ${text}】未通过效验，请检查！`);
+					return false;
 				}
 			})
 			return invalidInput.length == 0;
