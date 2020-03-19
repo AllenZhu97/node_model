@@ -730,5 +730,15 @@ export default {
       return true;
     },
     message: '［输入不正确，请输入正确格式ip地址］'
+  },
+  teshuzifu: {
+      validator: function (v) {
+          var patrn = /^[A-Za-z0-9\u4e00-\u9fa5]+$/;
+          if (!patrn.exec(v)) {
+              return false;
+          }
+          return true;
+      },
+      message: '［输入的内容不能包含特殊字符］'
   }
 };
