@@ -1,33 +1,36 @@
 {
-  "_from": "dhc-web-tools@^1.1.15",
-  "_id": "dhc-web-tools@1.1.15",
+  "_args": [
+    [
+      "dhc-web-tools@1.1.16",
+      "D:\\account\\newBase\\account-ui"
+    ]
+  ],
+  "_from": "dhc-web-tools@1.1.16",
+  "_id": "dhc-web-tools@1.1.16",
   "_inBundle": false,
-  "_integrity": "sha512-FIWakS7aLYEvyLo3z0Q7x8vTBLshPpREvlHtkWtg5Zt0g/dwdESNYnUAmMlm1GbVyoEG1Rx7OS5QAEl3ZQbgeA==",
+  "_integrity": "sha512-9YQtgwWaDL59tWYw+aEK9OHtTJ1Uk8JBPfkzxWx5cagpAgUvkP1+ma967CqOkHw9z0x6Y2O+CyzumO2m0IzVrw==",
   "_location": "/dhc-web-tools",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "dhc-web-tools@^1.1.15",
+    "raw": "dhc-web-tools@1.1.16",
     "name": "dhc-web-tools",
     "escapedName": "dhc-web-tools",
-    "rawSpec": "^1.1.15",
+    "rawSpec": "1.1.16",
     "saveSpec": null,
-    "fetchSpec": "^1.1.15"
+    "fetchSpec": "1.1.16"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "http://114.116.34.21:3389/dhc-web-tools/-/dhc-web-tools-1.1.15.tgz",
-  "_shasum": "4e0dfa64f281dcf1a8eadd325d2af881d12eaf96",
-  "_spec": "dhc-web-tools@^1.1.15",
+  "_resolved": "http://114.116.34.21:3389/dhc-web-tools/-/dhc-web-tools-1.1.16.tgz",
+  "_spec": "1.1.16",
   "_where": "D:\\account\\newBase\\account-ui",
   "author": {
     "name": "tianming"
   },
-  "bundleDependencies": false,
   "dependencies": {},
-  "deprecated": false,
   "description": "npm publish",
   "devDependencies": {
     "babel": "^6.23.0",
@@ -89,5 +92,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node ./sync-sourcefile.js"
   },
-  "version": "1.1.15"
+  "version": "1.1.16"
 }

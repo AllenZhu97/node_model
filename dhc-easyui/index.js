@@ -33,6 +33,7 @@ require('./src/jquery.combogrid.js');
 require('./src/jquery.datebox.js');
 require('./src/jquery.combotreegrid.js');
 require('./src/jquery.datalist.js');
+require('./src/jquery.accordion.js');
 //扩展组件
 require('./src/ajaxfileupload.js');
 require('./src/treesearch.js');

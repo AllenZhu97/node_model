@@ -83,22 +83,23 @@ $(function () {
 
 });
 //输入事件
-function getContent(obj,idtree) {
+function getContent(obj,idtree, namespace) {
     treeid = idtree;  
     textid = obj.id;
+    const namespaceRel = namespace ? '#' + namespace : '';
     //获取输入的值
     var kw = jQuery.trim($(obj).val());
     if (kw == "") {
-        $("#append_"+treeid).hide().html("");
+        $("#append_"+treeid, namespaceRel).hide().html("");
          return false;
     }
     //获取tree的所有节点
     var nodes=new Array();
-    var roots=$("#"+treeid).tree('getRoots');
+    var roots=$("#"+treeid, namespaceRel).tree('getRoots');
     nodes=nodes.concat(roots);
     for(var i=0;i<roots.length;i++){
     	var root=roots[i];
-    	var children = $("#"+treeid).tree('getChildren',root.target);
+    	var children = $("#"+treeid, namespaceRel).tree('getChildren',root.target);
     	//初始化tree id
     	for(var j=0;j<children.length;j++){
     		var node = children[j];
@@ -115,13 +116,13 @@ function getContent(obj,idtree) {
         var treeName = nodes[i].text;
         if (new RegExp(kw).test(treeName)) {
             //动态加载下拉框和数据
-            html = html + "<div style='width:100%;' class='item' onmouseenter='getFocus(this)' onClick='getCon(this,\""+treeid+"\",\""+nodeId+"\");'>" + treeName + "</div>";
+            html = html + "<div style='width:100%;' class='item' onmouseenter='getFocus(this)' onClick='getCon(this,\""+treeid+"\",\""+nodeId+"\",\""+ namespaceRel +"\");'>" + treeName + "</div>";
         }
     }
     if (html != "") {
-    	$("#append_"+treeid).show().html(html);
+    	$("#append_"+treeid, namespaceRel).show().html(html);
     } else {
-    	$("#append_"+treeid).hide().html("");
+    	$("#append_"+treeid, namespaceRel).hide().html("");
     }
 }
 //获取焦点事件
@@ -130,31 +131,31 @@ function getFocus(obj) {
     $(obj).addClass("addbg");
 }
 //单击事件
-function getCon(obj, treeid,nodeId) {
+function getCon(obj, treeid,nodeId, namespace) {
 
     //查找相应节点并滚动到该节点，高亮显示
-    var nodesFind = $("#" + treeid).tree('find', nodeId);
-    var opts=$("#" + treeid).tree('options');
+    var nodesFind = $("#" + treeid, namespace).tree('find', nodeId);
+    var opts=$("#" + treeid, namespace).tree('options');
     //如果搜索的树是带有checkbox 点击搜索的值 将选中值设置为选中状态 
     if(opts.checkbox){
-    	$("#" + treeid).tree('check',nodesFind.target);
+    	$("#" + treeid, namespace).tree('check',nodesFind.target);
     }
     	//找到当前的节点
-        extendAllParent(nodesFind,$("#" + treeid));
+        extendAllParent(nodesFind,$("#" + treeid, namespace));
         //跳转到选中节点
-        $("#" + treeid).tree('scrollTo', nodesFind.target);     //滚动到当前节点
+        $("#" + treeid, namespace).tree('scrollTo', nodesFind.target);     //滚动到当前节点
         //对节点选中
         //$("#" + treeid).tree('select', nodesFind.target);       //高亮显示
         //将节点背景置为红色
-        var obj=$("#" + treeid).tree('getNode',nodesFind.target);
+        var obj=$("#" + treeid, namespace).tree('getNode',nodesFind.target);
         $("div .tree-node-selected").removeClass("tree-node-selected");
         $(obj.target).addClass("tree-node-selected");
         //$(obj.target).css("background-color","red");
 
         //$("#" + textid).wrapper('setValue',nodeId);    //将选择的设备显示到搜索框中
-        $("#append_"+treeid).hide().html("");   //隐藏下拉框
+        $("#append_"+treeid, namespace).hide().html("");   //隐藏下拉框
         // 延迟处理  add by heyh 2018-01-11
-        setTimeout('afClick();',100);
+        setTimeout('afClick("'+ namespace +'");',100);
 
     
     	
@@ -164,11 +165,11 @@ function getCon(obj, treeid,nodeId) {
  * @author heyh
  * @date 2018-01-18
  */
-function afClick(){
-	var seleNode =  $("#" + treeid).tree('getSelected');
-	$("#" + treeid).tree('select',seleNode.target);
+function afClick(namespace){
+	var seleNode =  $("#" + treeid, namespace).tree('getSelected');
+	$("#" + treeid, namespace).tree('select',seleNode.target);
 	if(seleNode){
-		 $("#" + textid).val(seleNode.text);    //将选择的设备显示到搜索框中
+		 $("#" + textid, namespace).val(seleNode.text);    //将选择的设备显示到搜索框中
 	}	
 }
 function extendAllParent(node,tree){

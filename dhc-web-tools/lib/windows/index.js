@@ -160,6 +160,7 @@ export default {
                 rowindex: opts.rowindex,
             }, opts.rowdata);
             
+            // 打开窗口时页面类型为修改页,并从常量类中获取
             if (opts.page_type == '1') {
                 // 数据表格操作列中有新增按钮时，希望把新增这一行的数据传到新增页面中
                 if(opts.rowindex !== undefined && opts.rowindex !== null && opts.rowindex !== '') {
@@ -181,7 +182,7 @@ export default {
                     }
                 }
             } else {
-                // 打开窗口时页面类型为修改页,并从常量类中获取
+                // 为了兼容账户系统的page_type为3，4..其他情况
                 //增加选中当前行
                 if (opts.rowindex != undefined) {
                 	instance.el[opts.gridid].datagrid('selectRow', opts.rowindex);
