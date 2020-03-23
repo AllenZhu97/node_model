@@ -76,7 +76,7 @@ export default {
                 temp['comps'] = comps;
             }
         });
-        // 下拉框多选，当没有值时，上面处理会获取不到，所以这个地方针对没有获取到的下拉框空处理，
+		// 下拉框多选，当没有值时，上面处理会获取不到，所以这个地方针对没有获取到的下拉框空处理，
         // 解决列表查询，清空多选框查询条件后，上次选择值依然生效问题  modify by heyuhong 2020-02-15
         var combomulInputs = $('input.combo-f', '#' + namespace);
         combomulInputs.each(function (index, element) { 

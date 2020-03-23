@@ -741,4 +741,5 @@ export default {
       },
       message: '［输入的内容不能包含特殊字符］'
   }
+
 };
