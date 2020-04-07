@@ -31,19 +31,21 @@
                 parentField: "pid",
                 textField: "name",
                 panelWidth: 360,
-                icons:[{
-                    iconCls: 'icon-clear',
-                    handler:function (e) {
-                        if(e==undefined) return;
-                        $(e.data.target).combotree('setValues', '');
-                    }
-                }],
                 queryParams:{
                     tree_type:opts.tree_type,
                     isParentType:opts.isParentType,
                     isAsync:opts.isAsync
                 }
             }, opts);
+            // 覆盖jquery.element.js中的icons处理方法，解决inputtree清空控件值时，面板的选择值还存在问题
+            opts.icons = [{
+                    iconCls: 'icon-clear',
+                    handler:function (e) {
+                        if(e==undefined) return;
+                        $(e.data.target).combotree('setValues', '');
+                        $(e.data.target).combotree('clear');
+                    }
+                }];
             $.fn.combotree.call(jq, opts);
             
         });

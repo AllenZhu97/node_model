@@ -1132,31 +1132,27 @@
 				var field = fields[i];
 				var col = $(target).datagrid('getColumnOption', field);
 				if (col){
-					var value = row[field];	// the field value
+					var value = row[field];    // the field value
 					var css = col.styler ? (col.styler(row[field], row)||'') : '';
 					var cs = this.getStyleValue(css);
 					var cls = cs.c ? 'class="' + cs.c + '"' : '';
 					var style = col.hidden ? 'style="display:none;' + cs.s + '"' : (cs.s ? 'style="' + cs.s + '"' : '');
 					
-					var title = value;
-					if(row[field+"_zh"]){
-						title = row[field+"_zh"];
-					}
 					// 修改grid 鼠标悬停提示信息为格式化内容  update by heyh 2018-03-20
 					var valueTemp = "";
 					if(col.formatter){
-						valueTemp  = col.formatter(row[field], row);
-						// 如果格式化内容不存在“<” 和">",则显示格式化内容，排除 格式化内容是连接、图片、input控件等等
-						if(typeof valueTemp == 'string' && valueTemp.indexOf("<") == valueTemp.indexOf(">")){
-							title = valueTemp;
-						} else { // 当格式化内容中含有链接、图片等等时，修改悬浮显示 update by zhuxingpeng 20200328
-							if(row[field+"_zh"]){
-								title = row[field+"_zh"];
+							valueTemp  = col.formatter(row[field], row);
+							// 如果格式化内容不存在“<” 和">",则显示格式化内容，排除 格式化内容是连接、图片、input控件等等
+							if(typeof valueTemp == 'string' && valueTemp.indexOf("<") == valueTemp.indexOf(">")){
+									title = valueTemp;
+							} else { // 当格式化内容中含有链接、图片等等时，修改悬浮显示 update by zhuxingpeng 20200328
+									if(row[field+"_zh"]){
+											title = row[field+"_zh"];
+									}
 							}
-						}
 					}
 					if(title==undefined){
-						title = "";
+							title = "";
 					}
 					cc.push('<td field="' + field + '" ' + cls + ' ' + style + ' title="'+title+'">');
 					
