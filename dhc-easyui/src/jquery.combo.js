@@ -262,7 +262,9 @@
 		}
 		function getTop(){
 			var top = combo.offset().top + combo._outerHeight();
-			if (top + panel._outerHeight() > $(window)._outerHeight() + $(document).scrollTop()){
+			// if (top + panel._outerHeight() > $(window)._outerHeight() + $(document).scrollTop()){
+			// 可用高度减去任务栏高度，解决下拉框数据延伸至可选区域之外
+			if (top + panel._outerHeight() > $(window)._outerHeight() + $(document).scrollTop()-(screen.height - screen.availHeight )){
 				top = combo.offset().top - panel._outerHeight();
 			}
 			if (top < $(document).scrollTop()){
@@ -344,7 +346,7 @@
 			if (opts.multiple){
 				opts.onChange.call(target, values, oldValues);
 			} else {
-				opts.onChange.call(target, values[0], oldValues[0]);
+				opts.onChange.call(target, values[0], oldValues[0],target);
 			}
 			$(target).closest('form').trigger('_change', [target]);
 		}

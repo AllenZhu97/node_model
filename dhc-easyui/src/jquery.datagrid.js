@@ -2782,6 +2782,10 @@
 						// 如果格式化内容不存在“<” 和">",则显示格式化内容，排除 格式化内容是连接、图片、input控件等等
 						if(typeof valueTemp == 'string' && valueTemp.indexOf("<") == valueTemp.indexOf(">")){
 							title = valueTemp;
+						} else { // 当格式化内容中含有链接、图片等等时，修改悬浮显示 update by zhuxingpeng 20200328
+							if(rowData[field+"_zh"]){
+								title = rowData[field+"_zh"];
+							}
 						}
 					}
 					if(title==undefined){
