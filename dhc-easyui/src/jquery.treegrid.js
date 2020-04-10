@@ -1138,6 +1138,10 @@
 					var cls = cs.c ? 'class="' + cs.c + '"' : '';
 					var style = col.hidden ? 'style="display:none;' + cs.s + '"' : (cs.s ? 'style="' + cs.s + '"' : '');
 					
+					var title = value;
+					if(row[field+"_zh"]){
+						title = row[field+"_zh"];
+					}
 					// 修改grid 鼠标悬停提示信息为格式化内容  update by heyh 2018-03-20
 					var valueTemp = "";
 					if(col.formatter){
