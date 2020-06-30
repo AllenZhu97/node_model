@@ -49,5 +49,8 @@ require('./src/jquery.searchbox.js');
 require('./src/jquery.menubutton.js');
 require('./src/celleditor.js');
 require('./src/jquery.departTreePanel.js');
+require('./src/jquery.timespinner.js');
+require('./src/cron-selector.js');
+require('./src/jquery-cron.js');
 
 export default {}

@@ -1,8 +1,8 @@
 {
   "_from": "dhc-easyui@^1.3.6",
-  "_id": "dhc-easyui@1.3.6",
+  "_id": "dhc-easyui@1.3.7",
   "_inBundle": false,
-  "_integrity": "sha512-LAlg9lMZRSrGa2aPr8vNYUcq7fft87/jtnYRYPBLmqLnnD2Hmcq1+DFieG8DLtKRJFKQli9ll+Dl1be/1/q9YQ==",
+  "_integrity": "sha512-QzvSvHO2Az+9CTnWqtKxbdHysCz33K/gDbMzYNRjKV93/M7pWsRXcSh+k7TdYDLHQE7sCrPmeuABYqSnjoowag==",
   "_location": "/dhc-easyui",
   "_phantomChildren": {},
   "_requested": {
@@ -18,10 +18,10 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "http://114.116.34.21:3389/dhc-easyui/-/dhc-easyui-1.3.6.tgz",
-  "_shasum": "faa2288005927f7f1323376f866fdd3bb6657648",
+  "_resolved": "http://114.116.34.21:3389/dhc-easyui/-/dhc-easyui-1.3.7.tgz",
+  "_shasum": "6a4cd4aa56e2a414630bc74381a83e98921491e3",
   "_spec": "dhc-easyui@^1.3.6",
-  "_where": "D:\\account\\newBase\\account-ui",
+  "_where": "D:\\account\\account-ui",
   "author": "",
   "bundleDependencies": false,
   "dependencies": {
@@ -80,5 +80,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node ./sync-sourcefile.js"
   },
-  "version": "1.3.6"
+  "version": "1.3.7"
 }

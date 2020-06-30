@@ -1,8 +1,8 @@
 {
   "_from": "dhc-web-tools@^1.1.17",
-  "_id": "dhc-web-tools@1.1.17",
+  "_id": "dhc-web-tools@1.1.18",
   "_inBundle": false,
-  "_integrity": "sha512-1wyiMxLf2TYcLSU2oi9DG6AVLR/6ci5LZp9oIFyNXKNfSEoOu+gplSuA1p6Xj6OVt7tRm6j8DWAKuHj3gSwxWA==",
+  "_integrity": "sha512-JQ6p5IyS/pct0N3BLtjTePX9b1g3B4iPjtt1l3ZM/ElBwrGM7UvjyGnjwWxiQLCr15+mUHIVGvtUBJA51VsjdA==",
   "_location": "/dhc-web-tools",
   "_phantomChildren": {},
   "_requested": {
@@ -18,10 +18,10 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "http://114.116.34.21:3389/dhc-web-tools/-/dhc-web-tools-1.1.17.tgz",
-  "_shasum": "d658e639092ae647320fff4493ea30dfa8c03c34",
+  "_resolved": "http://114.116.34.21:3389/dhc-web-tools/-/dhc-web-tools-1.1.18.tgz",
+  "_shasum": "cb34115151a9d05af458a5d5ab9184a60c4ffe90",
   "_spec": "dhc-web-tools@^1.1.17",
-  "_where": "D:\\account\\newBase\\account-ui",
+  "_where": "D:\\account\\account-ui",
   "author": {
     "name": "tianming"
   },
@@ -89,5 +89,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "node ./sync-sourcefile.js"
   },
-  "version": "1.1.17"
+  "version": "1.1.18"
 }
